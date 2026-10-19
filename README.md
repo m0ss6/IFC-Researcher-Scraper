@@ -1,6 +1,6 @@
 # IFC Researcher Scraper
 
-A web scraper that builds a structured dataset of the researchers at the
+A web scraper built using Scrapy that creates a structured dataset of the researchers at the
 [Instituto de Fisiología Celular (IFC), UNAM](https://www.ifc.unam.mx/). It
 collects each researcher's department, research interests, lines of research,
 academic background, career history and contact e-mail.

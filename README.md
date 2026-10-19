@@ -10,7 +10,6 @@ researcher pages, which are written for people to browse, into JSON that later
 analysis and modelling can use.
 
 
-
 ## Why
 
 The IFC lists its researchers in several departments, and each researcher has
@@ -29,14 +28,15 @@ topic, you have to open every page by hand. This project:
 investigacion.php ──► department pages ──► researcher profile pages
    (6 departments)     (researcher links)     (info text + e-mail)
 ```
+## Spider schematic
+
+<img width="1079" height="557" alt="spider_schematic" src="https://github.com/user-attachments/assets/1b247c11-8a0a-4655-8056-33d36fe2f0fe" />
+
 
 The site renders its content with JavaScript, so requests go through a
 headless Chromium browser via
 [scrapy-playwright](https://github.com/scrapy-plugins/scrapy-playwright).
 See [docs/architecture.md](docs/architecture.md) for details.
-
-The last run collected **6 departments** and **59 researchers**, with profile
-text and an e-mail for all 59.
 
 ## Quick start
 

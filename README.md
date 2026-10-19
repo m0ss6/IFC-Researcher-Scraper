@@ -5,7 +5,7 @@ A web scraper that builds a structured dataset of the researchers at the
 collects each researcher's department, research interests, lines of research,
 academic background, career history and contact e-mail.
 
-The project was purely as an academic project. The scraper is the data-collection stage: it turns the IFC's
+The project was purely made as an academic project. The scraper is the data-collection stage: it turns the IFC's
 researcher pages, which are written for people to browse, into JSON that later
 analysis and modelling can use.
 

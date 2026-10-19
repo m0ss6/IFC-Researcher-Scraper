@@ -1,0 +1,32 @@
+# Checks that the project installs and the spider loads.
+# It does not run a crawl, to avoid sending traffic to ifc.unam.mx on every push.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Compile sources
+        run: python -m compileall -q ifc_grab
+
+      - name: Spider is discoverable
+        working-directory: ifc_grab
+        run: |
+          scrapy list | tee spiders.txt
+          grep -qx ifc_v4 spiders.txt

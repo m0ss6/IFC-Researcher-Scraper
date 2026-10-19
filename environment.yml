@@ -1,0 +1,12 @@
+# Conda environment for the IFC researcher scraper.
+#   conda env create -f environment.yml
+#   conda activate ifc-grab
+#   playwright install chromium
+name: ifc-grab
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13
+  - pip
+  - pip:
+      - -r requirements.txt
